@@ -29,3 +29,5 @@ echo $UDP_PORTS
 
 # Make changes permanent
 firewall-cmd --runtime-to-permanent
+
+echo "Made FirewallD rules permanent"
