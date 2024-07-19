@@ -18,7 +18,7 @@ done
 # Allow UDP ports
 for PORT in $UDP_PORTS
 do
-    firewall-cmd --add-port=$PORT/tcp
+    firewall-cmd --add-port=$PORT/udp
 done
 
 # Make changes permanent
