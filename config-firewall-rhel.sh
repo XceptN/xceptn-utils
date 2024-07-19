@@ -15,11 +15,15 @@ do
     firewall-cmd --add-port=$PORT/tcp
 done
 
+echo "Allowed TCP ports: $TCP_PORTS"
+
 # Allow UDP ports
 for PORT in $UDP_PORTS
 do
     firewall-cmd --add-port=$PORT/udp
 done
+
+echo "Allowed UDP ports: $UDP_PORTS"
 
 # Make changes permanent
 firewall-cmd --runtime-to-permanent
