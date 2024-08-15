@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Shell script to enable and configure firewalld on RHEL based systems
+# Shell script to enable and configure firewalld on RHEL 8 or 9 based systems
 
 # Enable and start firewalld
 systemctl enable firewalld
