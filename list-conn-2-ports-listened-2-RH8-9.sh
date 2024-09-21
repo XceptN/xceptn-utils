@@ -13,7 +13,7 @@ UDP_PORTS=`ss -uln | awk '{print $4}' | tail -n +2 | grep -oE '[^:]+$' | sort -u
 for PORT in $TCP_PORTS
 do
     echo "Connections to TCP port $PORT:"
-    ss -tn | grep ":$PORT " | awk {'print $6'}
+    ss -tn | grep ":$PORT " | awk {'print $5'}
     echo
 done
 
@@ -21,6 +21,6 @@ done
 for PORT in $UDP_PORTS
 do
     echo "Connections to UDP port $PORT:"
-    ss -un | grep ":$PORT " | awk {'print $6'}
+    ss -un | grep ":$PORT " | awk {'print $5'}
     echo
 done
