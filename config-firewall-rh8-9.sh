@@ -7,7 +7,7 @@ systemctl enable firewalld
 systemctl start firewalld
 
 TCP_PORTS=`ss -tln | awk '{print $4}' | tail -n +2 | grep -oE '[^:]+$' | sort -u`
-UDP_PORTS=`ss -tln | awk '{print $4}' | tail -n +2 | grep -oE '[^:]+$' | sort -u`
+UDP_PORTS=`ss -uln | awk '{print $4}' | tail -n +2 | grep -oE '[^:]+$' | sort -u`
 
 # Allow TCP ports
 for PORT in $TCP_PORTS
